@@ -8,7 +8,7 @@ int main(int argc, char** argv){
   ros::init(argc, argv, "simple_navigation_goals");
 
   //tell the action client that we want to spin a thread by default
-  MoveBaseClient ac("/home/turtlebot/catkin_ws/src/navigation/move_base", true);
+  MoveBaseClient ac("move_base", true);
 
   //wait for the action server to come up
   while(!ac.waitForServer(ros::Duration(5.0))){
@@ -21,8 +21,8 @@ int main(int argc, char** argv){
   goal.target_pose.header.frame_id = "base_link";
   goal.target_pose.header.stamp = ros::Time::now();
 
-  goal.target_pose.pose.position.x = 1.0;
-  goal.target_pose.pose.orientation.w = 1.0;
+  goal.target_pose.pose.position.x = 0.5;
+  goal.target_pose.pose.orientation.w = 0.5;
 
   ROS_INFO("Sending goal");
   ac.sendGoal(goal);
