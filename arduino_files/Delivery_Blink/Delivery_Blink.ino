@@ -53,11 +53,11 @@ void showNewData() {
 //    analogWrite(GreenPin, 255);
 
     for( int i = 0; i < NUM_LEDS; i++) {
-      leds[i] = CRGB::Green;
+      leds[i] = CRGB::Red;
     }
     FastLED.show();
     
-    delay(1000);
+    delay(2000);
     newData= false;
   }
 }
