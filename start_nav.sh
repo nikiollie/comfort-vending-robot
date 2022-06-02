@@ -26,7 +26,7 @@ then
   echo "1" >&2
 fi
 
-sleep 4
+sleep 10
 
 killall xterm
 

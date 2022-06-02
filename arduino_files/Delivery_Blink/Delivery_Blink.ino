@@ -1,7 +1,9 @@
+#include <Servo.h>
 #include <FastLED.h>
 
 char receivedChar;
 boolean newData = false;
+Servo lift;
 
 #define NUM_LEDS 60
 #define DATA_PIN 9
@@ -56,8 +58,18 @@ void showNewData() {
       leds[i] = CRGB::Red;
     }
     FastLED.show();
-    
+
+    lift.attach(10);
     delay(2000);
+    lift.write(60);
+    delay(2500);
+    lift.write(90);
+    delay(7000);
+    lift.write(120);
+    delay(2500);
+    lift.write(90);
+    lift.detach();
+    
     newData= false;
   }
 }
