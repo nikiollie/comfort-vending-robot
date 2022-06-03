@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+#include <iostream>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 #include "sound_play/sound_play.h"
@@ -30,12 +31,13 @@ int main(int argc, char** argv){
   //move towards goal
 
   //patient bed
+  /*
   goal.target_pose.pose.position.x = 9.45;
   goal.target_pose.pose.position.y = -0.802828953706;
   goal.target_pose.pose.position.z = 0.0;
-  
+  */
 
-  //goal.target_pose.pose.position.x = 0.5;
+  goal.target_pose.pose.position.x = 0.5;
 
   goal.target_pose.pose.orientation.x = 0.0;
   goal.target_pose.pose.orientation.y = 0.0;
@@ -45,6 +47,16 @@ int main(int argc, char** argv){
 
  //ROS_INFO("Sending goal");
  ac.sendGoal(goal);
+
+ //actionlib::SimpleClientGoalState state = ac.getState();
+ //ROS_INFO("State: %s", state.toString().c_str());
+
+ 
+ if(ac.getState() == actionlib::SimpleClientGoalState::PENDING) {
+   sc.playWave(path_to_sounds+"meow.wav");
+ }
+ 
+ //ROS_INFO("After if state: %s", state.toString().c_str());
 
  ac.waitForResult();
 
