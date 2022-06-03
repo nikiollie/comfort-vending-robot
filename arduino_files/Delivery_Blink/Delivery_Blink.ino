@@ -7,6 +7,7 @@ Servo lift;
 
 #define NUM_LEDS 60
 #define DATA_PIN 9
+#define BRIGHTNESS 80
 CRGB leds[NUM_LEDS];
 
 //int RedPin = 3;
@@ -16,7 +17,7 @@ CRGB leds[NUM_LEDS];
 void setup() {
   // put your setup code here, to run once:
   FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);  // GRB ordering is typical
-
+  FastLED.setBrightness( BRIGHTNESS);
 //  pinMode(RedPin, OUTPUT);
 //  pinMode(GreenPin, OUTPUT);
 //  pinMode(BluePin, OUTPUT);
