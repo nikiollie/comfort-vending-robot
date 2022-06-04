@@ -32,8 +32,8 @@ int main(int argc, char** argv){
 
   //patient bed
   /*
-  goal.target_pose.pose.position.x = 9.45;
-  goal.target_pose.pose.position.y = -0.802828953706;
+  goal.target_pose.pose.position.x = 9.81;
+  goal.target_pose.pose.position.y = -0.616;
   goal.target_pose.pose.position.z = 0.0;
   */
 
@@ -41,8 +41,8 @@ int main(int argc, char** argv){
 
   goal.target_pose.pose.orientation.x = 0.0;
   goal.target_pose.pose.orientation.y = 0.0;
-  goal.target_pose.pose.orientation.z = -0.731044000226;
-  goal.target_pose.pose.orientation.w = 0.682330323036;
+  goal.target_pose.pose.orientation.z = -0.0657;
+  goal.target_pose.pose.orientation.w = 0.99;
 
 
  //ROS_INFO("Sending goal");
