@@ -31,18 +31,18 @@ int main(int argc, char** argv){
   //move towards goal
 
   //patient bed
-  /*
-  goal.target_pose.pose.position.x = 9.81;
-  goal.target_pose.pose.position.y = -0.616;
+  
+  goal.target_pose.pose.position.x = 9.82;
+  goal.target_pose.pose.position.y = -0.80;
   goal.target_pose.pose.position.z = 0.0;
-  */
+  
 
-  goal.target_pose.pose.position.x = 0.5;
+ // goal.target_pose.pose.position.x = 0.5;
 
   goal.target_pose.pose.orientation.x = 0.0;
   goal.target_pose.pose.orientation.y = 0.0;
-  goal.target_pose.pose.orientation.z = -0.0657;
-  goal.target_pose.pose.orientation.w = 0.99;
+  goal.target_pose.pose.orientation.z = -0.06;
+  goal.target_pose.pose.orientation.w = 1.0;
 
 
  //ROS_INFO("Sending goal");
@@ -62,7 +62,7 @@ int main(int argc, char** argv){
 
  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) { 
    //ROS_INFO("Hooray, the base moved to patient bed!");
-   sc.playWave(path_to_sounds+"ship_bell.wav");
+   sc.playWave(path_to_sounds+"meow.wav");
    std::cout << 1 << std::endl;
    return 1;
  }
