@@ -1,7 +1,14 @@
 # erica, an emergency room interactive care assistant
 
 ## Robot Description
+<img src="https://user-images.githubusercontent.com/13370084/172716233-6caafc3b-90b9-4bf6-be06-e3b9926102d8.png" alt="drawing" width="100"/> <img src="https://user-images.githubusercontent.com/13370084/172716416-ec7d0576-e7d8-44ff-96bb-e420c18aa6ec.png" alt="drawing" width="200"/> <img src="https://user-images.githubusercontent.com/13370084/172716770-3642d044-c8f5-4dd5-9007-5c5102281760.png" alt="drawing" width="150"/>
+
 A social robot that greatly reduces the time and energy physicians have to spend retrieving and delivering items for patients. Erica starts at a specified location (inventory cabinet) and when something is ordered for a patient (i.e. blankets, water, snacks, etc), she autonomously drives through the ED into an appropriate location in the patient’s room, and then automatically dispenses the requested item.
+
+
+## System Architecture Diagram
+<img src="https://user-images.githubusercontent.com/13370084/172715334-5093a7a0-c8bd-45fa-84c4-3fda3743a159.png" alt="drawing" width="400"/>
+
 
 ## Folder/Files Description
 ### turtlebot_custom_maps
